@@ -1,0 +1,24 @@
+// Overrides
+
+//* Fonts
+
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+h1,
+h2,
+h3 {
+	font-family: "Anton", sans-serif;
+}
+
+// * Colors
+
+$primary: #0a9695;
+$secondary: #517076;
+$success: #45b381;
+$danger: #d32d34;
+$warning: #cc9d42;
+$light: #fefdf7;
+$dark: #191919;
+
+// Bootstrap originals
+@import "~bootstrap/scss/bootstrap.scss";
