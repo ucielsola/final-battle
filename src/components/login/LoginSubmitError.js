@@ -5,7 +5,7 @@ const LoginSubmitError = ({ stateHandler }) => {
 	return (
 		<div className='container'>
 			<p className='display-6 text-center text-danger'>Error!</p>
-			<p>Please check your credentials and try again</p>
+			<p className="text-center">Please check your credentials and try again</p>
 			<div className='container d-flex justify-content-center'>
 				<button
 					className='btn btn-primary text-light'
