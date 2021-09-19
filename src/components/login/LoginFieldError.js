@@ -1,7 +1,7 @@
 import React from "react";
 
-const InputError = (props) => {
+const LoginFieldError = (props) => {
 	return <div className='text-danger'>{props.children}</div>;
 };
 
-export default InputError;
+export default LoginFieldError;
