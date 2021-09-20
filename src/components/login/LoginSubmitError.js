@@ -1,7 +1,7 @@
 import React from "react";
 
 const LoginSubmitError = ({ stateHandler }) => {
-	// stateHandler trae el useState del parent
+	// stateHandler trae el useStatus del parent
 	return (
 		<div className='container'>
 			<p className='display-6 text-center text-danger'>Error!</p>
