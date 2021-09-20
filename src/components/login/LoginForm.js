@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
@@ -7,6 +8,7 @@ import LoginButton from "./LoginButton";
 
 const LoginForm = ({ stateHandler }) => {
 	// stateHandler trae el useStatus del parent
+	const history = useHistory();
 
 	const initialVals = {
 		email: "",
@@ -25,10 +27,11 @@ const LoginForm = ({ stateHandler }) => {
 			.post("http://challenge-react.alkemy.org/", values)
 			.then((res) => {
 				localStorage.setItem("token", res.data.token);
-				stateHandler("success");
+				history.push("/"); //redirects to homepage after login
 			})
 			.catch((err) => {
 				stateHandler("error");
+				// sets error state for triggering error msg rendering
 				console.log(err);
 			});
 

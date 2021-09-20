@@ -12,13 +12,13 @@ const LoginPage = () => {
 	if (loggedIn) {
 		// redirects to HomePage if user is logged in
 		history.push("/");
-		
 	}
 
 	return (
 		<div className='container shadow p-3 bg-body rounded position-absolute top-50 start-50 translate-middle col-xs-12 col-sm-10 col-md-8 col-lg-4'>
 			<h2 className='text-center'>~ Final Battle ~</h2>
 			{status === "error" ? (
+				// setted on api err
 				<LoginSubmitError stateHandler={setStatus} />
 			) : (
 				<LoginForm stateHandler={setStatus} />
