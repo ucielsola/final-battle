@@ -19,7 +19,7 @@ export const SearchInput = () => {
 				if (!res.data.results) {
 					// avisa al usuario que la búsqueda no arroja resultados
 					setError(
-						"There are no heros with that name 🧐 Try another! 🦹‍♀️"
+						"There are no heroes with that name 🧐 Try another! 🦹‍♀️"
 					);
 				}
 				setResults(res.data.results);
