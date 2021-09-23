@@ -3,10 +3,10 @@ import { useHistory } from "react-router-dom";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
-import LoginRequiredField from "./LoginRequiredField";
-import LoginButton from "./LoginButton";
+import { LoginRequiredField } from "./LoginRequiredField";
+import { LoginButton } from "./LoginButton";
 
-const LoginForm = ({ stateHandler }) => {
+export const LoginForm = ({ stateHandler }) => {
 	// stateHandler trae el useStatus del parent
 	const history = useHistory();
 
@@ -62,5 +62,3 @@ const LoginForm = ({ stateHandler }) => {
 		</Formik>
 	);
 };
-
-export default LoginForm;
