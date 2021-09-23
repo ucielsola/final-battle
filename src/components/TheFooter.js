@@ -1,11 +1,5 @@
-import React from 'react'
+import React from "react";
 
-const TheFooter = () => {
-  return (
-    <div>
-      FOOTER
-    </div>
-  )
-}
-
-export default TheFooter
+export const TheFooter = () => {
+	return <div className='position-absolute bottom-0 text-danger'>FOOTER</div>;
+};
