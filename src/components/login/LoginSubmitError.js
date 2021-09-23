@@ -1,6 +1,6 @@
 import React from "react";
 
-const LoginSubmitError = ({ stateHandler }) => {
+export const LoginSubmitError = ({ stateHandler }) => {
 	// stateHandler trae el useStatus del parent
 	return (
 		<div className='container'>
@@ -19,4 +19,3 @@ const LoginSubmitError = ({ stateHandler }) => {
 	);
 };
 
-export default LoginSubmitError;
