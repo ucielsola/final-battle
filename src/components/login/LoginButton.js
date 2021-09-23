@@ -1,6 +1,6 @@
 import React from "react";
 
-const LoginButton = (props) => {
+export const LoginButton = (props) => {
 	const { type, text } = props;
 	return (
 		<button type={type} className='btn btn-primary text-light'>
@@ -8,5 +8,3 @@ const LoginButton = (props) => {
 		</button>
 	);
 };
-
-export default LoginButton;

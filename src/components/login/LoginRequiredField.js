@@ -1,7 +1,8 @@
 import React from "react";
 import { Field, ErrorMessage } from "formik";
-import LoginFieldError from "./LoginFieldError";
-const LoginRequiredField = (props) => {
+import { LoginFieldError } from "./LoginFieldError";
+
+export const LoginRequiredField = (props) => {
 	const { name, label, id, placeholder, type } = props;
 
 	return (
@@ -21,5 +22,3 @@ const LoginRequiredField = (props) => {
 		</div>
 	);
 };
-
-export default LoginRequiredField;
