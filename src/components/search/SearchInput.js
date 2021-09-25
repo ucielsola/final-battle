@@ -2,14 +2,17 @@ import React, { useState } from "react";
 import axios from "axios";
 import "animate.css";
 
-export const SearchInput = () => {
-	const [results, setResults] = useState([]);
+export const SearchInput = ({ setResults }) => {
 	const [error, setError] = useState("");
 
 	const Search = (e) => {
 		e.preventDefault();
 		setError(false);
-		if (e.target.value.length < 3) return; // habilitar búsqueda después del 3er caracter
+
+		if (e.target.value.length < 3) {
+			setResults([]); // borra resultados
+			return; // habilitar búsqueda después del 3er caracter
+		}
 
 		axios
 			.get(
@@ -22,15 +25,16 @@ export const SearchInput = () => {
 						"There are no heroes with that name 🧐 Try another! 🦹‍♀️"
 					);
 				}
-				setResults(res.data.results);
+				setResults(res.data.results); // guarda resultados
+				console.log(res.data.results);
 			})
 			.catch((err) => {
 				console.warn(err);
-				setResults([]);
+				setResults([]); // borra resultados
 			});
 	};
 	return (
-		<div className='container-fluid w-70'>
+		<div className='container-fluid w-70 pt-4'>
 			<input
 				type='text'
 				placeholder='Ironman'
