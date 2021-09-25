@@ -4,8 +4,7 @@ import { HeroData } from "../components/hero/HeroData";
 
 export const HeroPage = () => {
 	const location = useLocation();
-	const hero = location.state;
-	console.log(hero);
+	const hero = location.state.herodata;
 
 	return (
 		<div className='animate__animated animate__fadeIn container pt-4 text-light'>
