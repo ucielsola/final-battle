@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { PrivateRoute } from "./components/PrivateRoute";
 import { TheHeader } from "./components/TheHeader";
-import { TheFooter } from "./components/TheFooter";
 import { LoginPage } from "./pages/LoginPage";
 import { HomePage } from "./pages/HomePage";
 import { SearchPage } from "./pages/SearchPage";
@@ -12,7 +11,7 @@ import "./assets/styles.scss";
 function App() {
 	return (
 		<Router>
-			<div className='bg-dark vh-100'>
+			<div className='container-fluid bg-dark min-vh-100'>
 				<TheHeader />
 				<Switch>
 					<Route path='/login' component={LoginPage} />
@@ -20,7 +19,6 @@ function App() {
 					<PrivateRoute path='/search' component={SearchPage} />
 					<PrivateRoute path='/hero' component={HeroPage} />
 				</Switch>
-				<TheFooter />
 			</div>
 		</Router>
 	);
