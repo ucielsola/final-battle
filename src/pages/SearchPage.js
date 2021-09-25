@@ -19,7 +19,11 @@ export const SearchPage = () => {
 			{results && (
 				<ul className='row row-cols-xl-3 mt-4 p-2 justify-content-center'>
 					{results.map((hero) => (
-						<SearchResults hero={hero} key={hero.id} />
+						<li
+							className='search__results col-md-4 list-group-item bg-dark border-dark p-2 mw-80 animate__animated animate__fadeIn'
+							key={hero.id}>
+							<SearchResults hero={hero} />
+						</li>
 					))}
 				</ul>
 			)}

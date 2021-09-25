@@ -22,5 +22,15 @@ $warning: #cc9d42;
 $light: #fefdf7;
 $dark: #1d1d1d;
 
+// * Animations *
+// stagger delay para las cards en search page
+.search__results {
+	@for $x from 1 through 6 {
+		&:nth-child(#{$x}) {
+			animation-delay: 400ms * ($x - 1);
+		}
+	}
+}
+
 // * Bootstrap *
 @import "~bootstrap/scss/bootstrap.scss";
