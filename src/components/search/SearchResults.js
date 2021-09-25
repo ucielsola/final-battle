@@ -33,7 +33,7 @@ export const SearchResults = ({ hero }) => {
 				<Link
 					to={{
 						pathname: "/hero",
-						state: heroData, // pasa info del heroe a la página del heroe,
+						state: { herodata: heroData, type: "stats" }, // pasa info del heroe a la página del heroe,
 					}}
 					className='btn btn-primary'>
 					Full Info
