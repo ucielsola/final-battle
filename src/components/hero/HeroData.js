@@ -2,7 +2,6 @@ import React from "react";
 
 export const HeroData = ({ hero, type }) => {
 	// hero trae la info del heroe, type trae pedido de Stats o Info
-
 	const heroStats = (
 		<>
 			<h4 className='text-decoration-underline'>- PowerStats -</h4>
