@@ -13,7 +13,7 @@ export const HeroPage = () => {
 					<img
 						alt={hero.name}
 						src={hero.img}
-						className='mw-100 mx-auto'
+						className='mw-100 mx-auto animate__animated animate__flipInY animate__delay-1s '
 					/>
 				</div>
 				<div className='col-sm-12 col-md-8 col-lg-6 py-4 px-4'>
