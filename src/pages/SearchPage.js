@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { SearchInput } from "../components/search/SearchInput";
-import { SearchResults } from "../components/search/SearchResults";
+import { HeroCard } from "../components/shared/HeroCard";
 import "animate.css";
 
 export const SearchPage = () => {
@@ -22,7 +22,7 @@ export const SearchPage = () => {
 						<li
 							className='search__results col-md-4 list-group-item bg-dark border-dark p-2 mw-80 animate__animated animate__fadeIn'
 							key={hero.id}>
-							<SearchResults hero={hero} />
+							<HeroCard hero={hero} />
 						</li>
 					))}
 				</ul>

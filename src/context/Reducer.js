@@ -9,7 +9,7 @@ function Reducer(state, action) {
 			return {
 				...state,
 				teamGood: state.teamGood.filter(
-					(item) => item.id !== action.payload
+					(hero) => hero.id !== action.payload
 				),
 			};
 		case "ADD_TO_TEAM_BAD":
@@ -21,7 +21,7 @@ function Reducer(state, action) {
 			return {
 				...state,
 				teamBad: state.teamBad.filter(
-					(item) => item.id !== action.payload
+					(hero) => hero.id !== action.payload
 				),
 			};
 		default:
