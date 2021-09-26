@@ -50,3 +50,5 @@ export const SearchInput = ({ setResults }) => {
 		</div>
 	);
 };
+
+			// {quotaMsg && <div className='bg-danger rounded mt-2 p-2 text-light text-center animate__animated animate__bounceIn text-light bg-danger text-center lead'>`{quotaMsg(heroData.alignment)}`</div>}
