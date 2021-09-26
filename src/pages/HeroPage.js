@@ -37,7 +37,7 @@ export const HeroPage = () => {
 											: "😈"}
 									</span>
 								</div>
-								<div className='col-md-8'>
+								<div className='col-md-8 d-flex justify-content-center'>
 									<span className='display-6 text-capitalize'>
 										{hero.alignment}
 									</span>
