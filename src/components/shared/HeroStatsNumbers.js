@@ -1,12 +1,11 @@
 import React from "react";
 
 export const HeroStatsNumbers = ({ number }) => {
-	const className =
+	const color =
 		number <= 40
 			? "text-danger"
 			: number >= 60
 			? "text-success"
 			: "text-warning";
-	console.log(className);
-	return <span className={className}>{number}</span>;
+	return <span className={color}>{number}</span>;
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { HeroStatsNumbers } from "./HeroStatsNumbers";
+import { HeroStatsNumbers } from "../shared/HeroStatsNumbers";
 
 export const HeroData = ({ hero, type }) => {
 	// hero trae la info del heroe, type trae pedido de Stats o Info
