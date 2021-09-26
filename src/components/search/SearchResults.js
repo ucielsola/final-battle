@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const SearchResults = ({ hero }) => {
 	const heroData = {
-		// objeto más cómodo para almacenar solo la info necesaria y pasarla a la HeroPage
+		// almacena solo la info necesaria y para pasar a la HeroPage. Evita más llamadadas a la API.
 		name: `${hero.name}`,
 		img: `${hero.image.url}`,
 		fullName: `${hero.biography["full-name"]}`,
