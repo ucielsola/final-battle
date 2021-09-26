@@ -1,10 +1,42 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useLocation } from "react-router";
+import { TeamContext } from "../context/TeamState";
 import { HeroData } from "../components/hero/HeroData";
+import { HeroCardControls } from "../components/shared/HeroCardControls";
 
 export const HeroPage = () => {
 	const location = useLocation();
 	const hero = location.state.herodata;
+
+	const { teamGood, teamBad } = useContext(TeamContext);
+	const isInTeam = Boolean(
+		teamGood.find((o) => o.id === hero.id) ||
+			teamBad.find((o) => o.id === hero.id)
+	);
+
+	let quotaMsg = "";
+	const quota = (alignment) => {
+		// avisa si la cuota bueno/malo o el todo el equipo esta completo
+		if (teamBad.length === 3 && teamGood.length === 3) {
+			return (quotaMsg = "Your team is already full!");
+		}
+
+		if (alignment === "bad") {
+			if (teamBad.length === 3) {
+				return (quotaMsg =
+					"Your team already has 3 bad heros. Choose some goodguys now.");
+			} else {
+				return null;
+			}
+		} else {
+			if (teamGood.length === 3) {
+				return (quotaMsg =
+					"Your team already has 3 good heros. Choose some badguys now.");
+			} else {
+				return null;
+			}
+		}
+	};
 
 	return (
 		<div className='animate__animated animate__fadeIn container pt-4 text-light'>
@@ -45,22 +77,26 @@ export const HeroPage = () => {
 							</div>
 						</div>
 						<div className='col-4 d-flex align-items-center justify-content-center'>
-							<button
-								type='button'
-								className='btn btn-success w-75'
-								title='Add to your Team'>
-								Hire
-							</button>
+							<HeroCardControls
+								action='hire'
+								hero={hero}
+								exist={isInTeam}
+								quota={!!quota(hero.alignment)}
+							/>
 						</div>
 						<div className='col-4 d-flex align-items-center justify-content-center'>
-							<button
-								type='button'
-								className='btn btn-danger w-75'
-								title='Remove from your Team'
-								disabled>
-								Fire
-							</button>
+							<HeroCardControls
+								action='fire'
+								hero={hero}
+								exist={isInTeam}
+								quota={!!quota(hero.alignment)}
+							/>
 						</div>
+						{quota(hero.alignment) && (
+							<div className='animate__animated animate__bounceIn bg-danger rounded mt-2 p-2 text-light text-center'>
+								{quotaMsg}
+							</div>
+						)}
 					</div>
 				</div>
 			</div>
