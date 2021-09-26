@@ -1,4 +1,5 @@
 import React from "react";
+import { HeroStatsNumbers } from "./HeroStatsNumbers";
 
 export const HeroData = ({ hero, type }) => {
 	// hero trae la info del heroe, type trae pedido de Stats o Info
@@ -7,18 +8,36 @@ export const HeroData = ({ hero, type }) => {
 			<h4 className='text-decoration-underline'>- PowerStats -</h4>
 			<ul className='list-unstyled'>
 				{hero.intelligence === "null" ? null : (
-					<li>~ Intelligence: {hero.intelligence}</li>
+					<li>
+						~ Intelligence:{" "}
+						<HeroStatsNumbers number={hero.intelligence} />
+					</li>
 				)}
 				{hero.strength === "null" ? null : (
-					<li>~ Strength: {hero.strength}</li>
+					<li>
+						~ Strength: <HeroStatsNumbers number={hero.strength} />
+					</li>
 				)}
-				{hero.speed === "null" ? null : <li>~ Speed: {hero.speed}</li>}
+				{hero.speed === "null" ? null : (
+					<li>
+						~ Speed: <HeroStatsNumbers number={hero.speed} />
+					</li>
+				)}
 				{hero.durability === "null" ? null : (
-					<li>~ Durability: {hero.durability}</li>
+					<li>
+						~ Durability:{" "}
+						<HeroStatsNumbers number={hero.durability} />
+					</li>
 				)}
-				{hero.power === "null" ? null : <li>~ Power: {hero.power}</li>}
+				{hero.power === "null" ? null : (
+					<li>
+						~ Power: <HeroStatsNumbers number={hero.power} />
+					</li>
+				)}
 				{hero.combat === "null" ? null : (
-					<li>~ Combat: {hero.combat}</li>
+					<li>
+						~ Combat: <HeroStatsNumbers number={hero.combat} />
+					</li>
 				)}
 			</ul>
 		</>
