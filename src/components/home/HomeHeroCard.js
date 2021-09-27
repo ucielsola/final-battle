@@ -3,8 +3,11 @@ import { Link } from "react-router-dom";
 import { HeroCardControls } from "../shared/HeroCardControls";
 
 export const HomeHeroCard = ({ hero }) => {
+	const maxWidth = {
+		maxWidth: "18rem",
+	};
 	return (
-		<div className='card p-2 vw-'>
+		<div className='card p-2' style={maxWidth}>
 			<img
 				src={hero.img}
 				alt={hero.name}

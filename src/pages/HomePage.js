@@ -8,7 +8,7 @@ export const HomePage = () => {
 	const showTeamGrid = teamGood.length > 0 || teamBad.length > 0;
 
 	return (
-		<div className='animate__animated animate__fadeIn container pt-4 text-light'>
+		<div className='animate__animated animate__fadeIn container pt-4 text-light flex-grow-1'>
 			<div className='container-fluid'>
 				<h2 className='display-4'>Your Team</h2>
 				<p className='display-6'>

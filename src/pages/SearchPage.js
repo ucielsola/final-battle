@@ -7,7 +7,7 @@ export const SearchPage = () => {
 	const [results, setResults] = useState([]);
 
 	return (
-		<div className='animate__animated animate__fadeIn container pt-4 text-light'>
+		<div className='animate__animated animate__fadeIn container pt-4 text-light flex-grow-1'>
 			<div className='container-fluid'>
 				<h2 className='display-4'>Build your team</h2>
 				<p className='display-6'>

@@ -39,7 +39,7 @@ export const HeroPage = () => {
 	};
 
 	return (
-		<div className='animate__animated animate__fadeIn container pt-4 text-light'>
+		<div className='animate__animated animate__fadeIn container pt-4 text-light flex-grow-1'>
 			<div className='row'>
 				<div className='col-sm-12 col-md-6 d-flex justify-content-center'>
 					<img
