@@ -2,7 +2,7 @@ import React from "react";
 
 export const TheFooter = () => {
 	return (
-		<div className='badd-flex justify-content-center container border-top border-light bg-dark px-4'>
+		<div className='d-flex justify-content-center container border-top border-light bg-dark px-4'>
 			<span className='text-light'>
 				Made with <span> 💜 </span> by <span> </span>
 				<a
