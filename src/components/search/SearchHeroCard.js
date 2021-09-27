@@ -72,10 +72,10 @@ export const SearchHeroCard = ({ hero }) => {
 				<h4 className='card-title col-6 text-dark'>
 					<strong>{heroData.name}</strong>
 				</h4>
-				<h5 className='col-6 text-capitalize pt-1'>
+				<h6 className='col-6 text-capitalize pt-1'>
 					{heroData.alignment === "bad" ? "😈" : "😇"}{" "}
 					{heroData.alignment}
-				</h5>
+				</h6>
 			</div>
 			<h6 className='card-subtitle text-dark'>{heroData.fullName}</h6>
 			<Link
