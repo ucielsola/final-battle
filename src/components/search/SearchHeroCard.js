@@ -81,7 +81,7 @@ export const SearchHeroCard = ({ hero }) => {
 			<Link
 				to={{
 					pathname: "/hero",
-					state: { herodata: heroData }, // pasa info del heroe a la página del heroe,
+					state: { herodata: heroData, fromHome: false }, // pasa info del heroe a la página del heroe,
 				}}
 				className='btn btn-primary mt-2'>
 				Full Info
