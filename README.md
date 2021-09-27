@@ -1,4 +1,4 @@
-# Final Battle - Alkemy's React Challenge by [Uciel Sola](https://ucielsola.com "Come see my portfolio!") 
+# Final Battle - [Alkemy](https://alkemy.org "Oficial Site")'s React Challenge by [Uciel Sola](https://ucielsola.com "Come see my portfolio!") 
 
 Here you can read the [Challenge's guidelines](https://drive.google.com/file/d/1kNbni3fBBYiAErWYIQNmlggJTNHmLgPL/view "Read more...") 📜
 ##### Main Functions
