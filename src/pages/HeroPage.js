@@ -3,10 +3,12 @@ import { useLocation } from "react-router";
 import { TeamContext } from "../context/TeamState";
 import { HeroData } from "../components/hero/HeroData";
 import { HeroCardControls } from "../components/shared/HeroCardControls";
+import { Link } from "react-router-dom";
 
 export const HeroPage = () => {
 	const location = useLocation();
 	const hero = location.state.herodata;
+	const fromHome = location.state.fromHome; // boolean para determinar de donde viene el usuario. No se muestra boton HIRE
 
 	const { teamGood, teamBad } = useContext(TeamContext);
 	const isInTeam = Boolean(
@@ -18,7 +20,14 @@ export const HeroPage = () => {
 	const quota = (alignment) => {
 		// avisa si la cuota bueno/malo o el todo el equipo esta completo
 		if (teamBad.length === 3 && teamGood.length === 3) {
-			return (quotaMsg = "Your team is already full!");
+			return (quotaMsg = (
+				<Link
+					to='/'
+					className='text-light text-decoration-none'
+					title='Manage Team'>
+					Your team is already full!
+				</Link>
+			));
 		}
 
 		if (alignment === "bad") {
@@ -37,6 +46,14 @@ export const HeroPage = () => {
 			}
 		}
 	};
+
+	const backToTeam = (
+		<div className='col-4 d-flex align-items-center justify-content-center'>
+			<Link to='/' className='btn btn-success text-light'>
+				Back to Team
+			</Link>
+		</div>
+	);
 
 	return (
 		<div className='animate__animated animate__fadeIn container pt-4 text-light flex-grow-1'>
@@ -76,14 +93,18 @@ export const HeroPage = () => {
 								</div>
 							</div>
 						</div>
-						<div className='col-4 d-flex align-items-center justify-content-center'>
-							<HeroCardControls
-								action='hire'
-								hero={hero}
-								exist={isInTeam}
-								quota={!!quota(hero.alignment)}
-							/>
-						</div>
+						{fromHome ? (
+							backToTeam
+						) : (
+							<div className='col-4 d-flex align-items-center justify-content-center'>
+								<HeroCardControls
+									action='hire'
+									hero={hero}
+									exist={isInTeam}
+									quota={!!quota(hero.alignment)}
+								/>
+							</div>
+						)}
 						<div className='col-4 d-flex align-items-center justify-content-center'>
 							<HeroCardControls
 								action='fire'
@@ -92,7 +113,7 @@ export const HeroPage = () => {
 								quota={!!quota(hero.alignment)}
 							/>
 						</div>
-						{quota(hero.alignment) && (
+						{quota(hero.alignment) && !fromHome && (
 							<div className='animate__animated animate__bounceIn bg-danger rounded mt-2 p-2 text-light text-center'>
 								{quotaMsg}
 							</div>
