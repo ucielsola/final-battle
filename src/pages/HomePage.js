@@ -1,13 +1,12 @@
 import React, { useContext } from "react";
 import { TeamContext } from "../context/TeamState";
-
 import { HomeEmptyGrid } from "../components/home/HomeEmptyGrid";
+import { HomeTeamGrid } from "../components/home/HomeTeamGrid";
 export const HomePage = () => {
 	const { teamGood, teamBad } = useContext(TeamContext);
-	console.log(teamGood);
-	console.log(teamBad);
 
-	const TeamGrid = false;
+	const showTeamGrid = teamGood.length > 0 || teamBad.length > 0;
+
 	return (
 		<div className='animate__animated animate__fadeIn container pt-4 text-light'>
 			<div className='container-fluid'>
@@ -17,7 +16,7 @@ export const HomePage = () => {
 					<span className='text-primary'> Final Battle</span>?
 				</p>
 			</div>
-			{TeamGrid ? <div></div> : <HomeEmptyGrid />}
+			{showTeamGrid ? <HomeTeamGrid /> : <HomeEmptyGrid />}
 		</div>
 	);
 };
