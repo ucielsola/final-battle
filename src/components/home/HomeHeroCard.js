@@ -24,7 +24,7 @@ export const HomeHeroCard = ({ hero }) => {
 			<Link
 				to={{
 					pathname: "/hero",
-					state: { hero: hero }, // pasa info del heroe a la página del heroe,
+					state: { herodata: hero }, // pasa info del heroe a la página del heroe,
 				}}
 				className='btn btn-primary mt-2'>
 				Full Info
