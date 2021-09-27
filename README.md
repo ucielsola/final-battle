@@ -6,9 +6,9 @@ Here you can read the [Challenge's guidelines](https://drive.google.com/file/d/1
 - Create a balanced 6 members team, with 3 good heros and 3 bad heros.
 - Edit your team
 
-#### Crentials 🔒
-- 👤 challenge@alkemy.org
-- 🔑 react
+#### Credentials 🔒
+- 👤 **user**: challenge@alkemy.org
+- 🔑 **pass**: react
 
 #### IMPORTANT! ⚠️
 The [SuperHero API](https://superheroapi.com/ "Official Site") is having some internal issues, so in order to make this project work in local environment, you will need to enable [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin "Read more about CORS at MDN.org") in your browser! I recomend using this for that purpose:
