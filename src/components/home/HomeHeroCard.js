@@ -1,11 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { HeroCardControls } from "../shared/HeroCardControls";
-import { TeamContext } from "../../context/TeamState";
 
 export const HomeHeroCard = ({ hero }) => {
-	const { teamGood, teamBad } = useContext(TeamContext);
-
 	return (
 		<div className='card p-2 vw-'>
 			<img
