@@ -23,4 +23,4 @@ The [SuperHero API](https://superheroapi.com/ "Official Site") is having some in
 - Animations with [Animate.css](https://animate.style/ "Official Website").
 
 
-## Screenshots & LiveDemo - Coming Soon -
+## Screenshots & LiveDemo *- Coming Soon -*
