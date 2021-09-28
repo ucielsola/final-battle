@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { TeamContext } from "../../context/TeamState";
 import { HomeHeroCard } from "../home/HomeHeroCard";
 import { HomeEmptyCard } from "./HomeEmptyCard";
-import { HomeTeamStats } from "./HomeTeamStats";
 
 export const HomeTeamGrid = () => {
 	const { teamGood, teamBad } = useContext(TeamContext);
@@ -30,8 +29,7 @@ export const HomeTeamGrid = () => {
 	}
 	return (
 		<>
-			<HomeTeamStats />
-			<ul className='row'>
+			<ul className='row px-0 pt-4'>
 				{teamGood.map((hero) => (
 					<li
 						className='search__results d-flex justify-content-center align-items-start col-md-4 list-group-item bg-dark border-dark p-2 mw-80 animate__animated animate__fadeIn'
