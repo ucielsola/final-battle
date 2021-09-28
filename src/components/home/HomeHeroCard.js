@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { HeroData } from "../hero/HeroData";
 import { HeroCardControls } from "../shared/HeroCardControls";
 
 export const HomeHeroCard = ({ hero }) => {
@@ -21,6 +22,7 @@ export const HomeHeroCard = ({ hero }) => {
 				</h5>
 			</div>
 			<h6 className='card-subtitle text-dark'>{hero.fullName}</h6>
+			<HeroData hero={hero} type='stats' />
 			<Link
 				to={{
 					pathname: "/hero",
