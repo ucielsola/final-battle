@@ -21,6 +21,3 @@ The [SuperHero API](https://superheroapi.com/ "Official Site") is having some in
 - Fetching SuperHero data from the [SuperHero API](https://superheroapi.com/ "Official Site") using [Axios](https://axios-http.com/ "Official Website").
 - Styling made with [Bootstrap](https://getbootstrap.com/ "Official Website").
 - Animations with [Animate.css](https://animate.style/ "Official Website").
-
-
-## Screenshots & LiveDemo *- Coming Soon -*
