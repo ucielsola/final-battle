@@ -10,7 +10,6 @@ export const TheFooter = () => {
 					title='Visit my portfolio!'
 					className='lead text-decoration-none'
 					target='_blank'
-					without
 					rel='noopener noreferrer'>
 					Uciel Sola
 				</a>
@@ -22,7 +21,6 @@ export const TheFooter = () => {
 						title='Visit repo'
 						className='lead text-decoration-none'
 						target='_blank'
-						without
 						rel='noopener noreferrer'>
 						GitHub Repo
 					</a>
